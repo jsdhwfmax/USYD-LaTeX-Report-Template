@@ -5,7 +5,7 @@
 \ProvidesClass{USYDReport}[2024/04/18 Version 1.3 The University of Sydney Course Report Template (pdfLaTeX)]
 
 % --- Load Base Class
-\LoadClass[a4paper]{article}
+\LoadClass[a4paper, 12pt]{article}
 
 % ==============================================================================
 % Required Packages
@@ -48,6 +48,7 @@
 \newcommand{\sihao}{\fontsize{14pt}{\baselineskip}\selectfont}
 \newcommand{\xiaosihao}{\fontsize{12pt}{\baselineskip}\selectfont}
 \newcommand{\wuhao}{\fontsize{10.5pt}{\baselineskip}\selectfont}
+\setstretch{1.3}
 
 % ==============================================================================
 % Header and Footer Settings
