@@ -1,0 +1,77 @@
+%!TEX TS-program = pdflatex
+% vim: set fenc=utf-8
+% -*- coding: UTF-8; -*-
+%!TEX encoding = UTF-8
+
+\documentclass[twoside]{USYDReport}
+
+% =============================================
+%                 填写封面信息
+% =============================================
+\title{Your Report Title Goes Here} % 你的报告/论文题目
+\author{Firstname Lastname}         % 你的姓名
+\stunum{123456789}                  % 你的学号 (9 digits)
+\coursecode{XXXX0000}               % 课程代码 (e.g., IDEA9106)
+\tutorial{Tutorial [Number]}        % Tutorial 班级
+\groupnum{Group [Number/Name]}      % 小组号或名称 (如果是个人作业可以留空)
+\tutor{Your Tutor's Name}           % Tutor 或 Lecturer 姓名
+
+% =============================================
+%                 加载额外的宏包
+% =============================================
+\usepackage{float}      % 控制图表浮动位置 (H)
+\usepackage{ragged2e}   % 文本对齐
+\usepackage{xspace}     % 智能空格控制
+\usepackage{pifont}     % 更多特殊符号
+\usepackage{multicol}   % 多栏排版
+\usepackage{multirow}   % 表格跨行
+\usepackage{hyperref}   % 生成可点击的超链接
+\usepackage{newtxmath}  % 数学公式字体匹配 Times
+\usepackage{adjustbox}  % 缩放图表
+\usepackage[table]{xcolor} % 表格颜色支持
+
+\begin{document}
+    % --- 生成封面和目录 (无需修改) ---
+    \maketitle
+    \makeToc
+	
+    % =============================================
+    %                   开始正文
+    % =============================================
+    
+    \section{Introduction to the Template}
+    
+    Welcome to \textbf{The University of Sydney Postgraduate Coursework Report Template}. This document is designed to provide a clean, professional, and easy-to-use LaTeX framework for your university assignments. 
+    
+    \subsection{How to Compile}
+    This template has been optimized to run completely on \textbf{pdfLaTeX}. You no longer need to configure complex font settings or rely on XeLaTeX for basic English reports. Simply set your Overleaf compiler to pdfLaTeX, and click ``Recompile''.
+    
+    %-----------------------------------------------------------------------
+    \section{Formatting Guide}
+
+    \subsection{Creating Sections and Subsections}
+    Organizing your report is straightforward. Use the \verb|\section{}| command for main chapters. For smaller topics, use \verb|\subsection{}| and \verb|\subsubsection{}|. The numbering is handled automatically.
+
+    \subsubsection{A Note on Spacing}
+    Do not use the \verb|\begin{spacing}{...}| environment to wrap around your section titles. The template automatically calculates the appropriate breathing room above and below your headings.
+
+    \subsection{Citations and References}
+    Academic integrity is crucial at USYD. When you need to cite a source, simply use the cite command like this: \cite{example_reference}. 
+    
+    Remember to update your \verb|Bibs/mybib.bib| file with your actual references. We recommend using standard English citation styles such as \verb|apalike|, \verb|harvard|, or \verb|ieeetr|.
+
+    %-----------------------------------------------------------------------
+    \section{Conclusion}
+    
+    You are now ready to start writing your report. Delete these instructional texts, fill in your title page information at the top of the \verb|main.tex| file, and begin typing your brilliant ideas. Good luck with your assignment!
+	
+    \clearpage
+    % =============================================
+    %                   参考文献
+    % =============================================
+    \bibliographystyle{apalike} % 参考文献排版风格 (可根据要求更改)
+    \bibliography{Bibs/mybib}   % 指向你的 .bib 文件
+    \phantomsection
+    \addcontentsline{toc}{section}{References}
+
+\end{document}
