@@ -5,7 +5,7 @@
 \ProvidesClass{USYDReport}[2024/04/18 Version 1.3 The University of Sydney Course Report Template (pdfLaTeX)]
 
 % --- Load Base Class
-\LoadClass[a4paper, 12pt]{article}
+\LoadClass[a4paper,12pt]{article}
 
 % ==============================================================================
 % Required Packages
@@ -33,7 +33,7 @@
     headheight=2.5cm, headsep=10pt, footskip=2cm]{geometry}
 
 % ==============================================================================
-% Font Settings (pdfLaTeX compatible Times New Roman)
+% Font Settings & Global Spacing
 % ==============================================================================
 \RequirePackage{newtxtext, newtxmath} 
 \newcommand{\TimesNewRoman}{\rmfamily}
@@ -48,6 +48,8 @@
 \newcommand{\sihao}{\fontsize{14pt}{\baselineskip}\selectfont}
 \newcommand{\xiaosihao}{\fontsize{12pt}{\baselineskip}\selectfont}
 \newcommand{\wuhao}{\fontsize{10.5pt}{\baselineskip}\selectfont}
+
+% Set global line spacing for the body text
 \setstretch{1.3}
 
 % ==============================================================================
@@ -168,7 +170,8 @@
 
 \renewcommand{\maketitle}[1][12em]{
     \begin{titlepage}
-     \centering
+        \singlespacing % <--- Force single spacing for the cover to keep it clean
+        \centering
         \begin{center}
             \vspace*{60pt}
             {\sanhao \bfseries The University of Sydney}\\
